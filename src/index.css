@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+/* 全局基色：深蓝夜+霓虹文字 */
+body {
+  background-color: #0F172A; /* 深色背景 */
+  color: #E2E8F0;           /* slate-200-ish 主文案 */
+  -webkit-font-smoothing: antialiased;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter",
+    "PingFang SC", "HarmonyOS Sans", "Microsoft YaHei", sans-serif;
+}
+
+/* 隐藏水平滚动条（各内核） */
+.no-scrollbar {
+  -ms-overflow-style: none;     /* IE/Edge */
+  scrollbar-width: none;        /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar { display: none; } /* WebKit */
+
+/* 让按钮/卡片浮出时不被父容器裁切（已在组件里用 overflow-y-visible，这里兜底） */
+.timeline-allow-float {
+  overflow-y: visible;
+}
+
+/* 可选：卡片文字选区更友好（在 select-none 的外层，不影响拖拽手感）
+   若你不需要可删除 */
+.timeline-allow-select * {
+  user-select: text;
+}
